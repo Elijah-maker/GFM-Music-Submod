@@ -443,12 +443,6 @@ song = {
 	}
 }
 song = {
-	name = "8.550142-2.mp3"
-	chance = {
-		factor = 1 #?
-	}
-}
-song = {
 	name = "waltz_no3.mp3"
 	chance = {
 		factor = 1
