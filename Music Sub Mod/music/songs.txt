@@ -14,7 +14,7 @@ song = {
 	}
 }
 song = {
-	name = "autflavor.mp3"
+	name = "Men of Harlech.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -28,7 +28,7 @@ song = {
 	}
 }
 song = {
-	name = "canflavor.mp3"
+	name = "The Maple Leaf Forever.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -56,7 +56,7 @@ song = {
 	}
 }
 song = {
-	name = "brzflavor.mp3"
+	name = "Hino da Independencia.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -70,7 +70,7 @@ song = {
 	}
 }
 song = {
-	name = "usaflavor.mp3"
+	name = "Marching Through Georgia.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -84,7 +84,7 @@ song = {
 	}
 }
 song = {
-	name = "casflavor.mp3"
+	name = "Dixie Land.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -98,7 +98,7 @@ song = {
 	}
 }
 song = {
-	name = "mexflavor.mp3"
+	name = "Himno Nacional Mexicano.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -112,7 +112,7 @@ song = {
 	}
 }
 song = {
-	name = "gcoflavor.mp3"
+	name = "Marcha Libertadora.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -121,54 +121,12 @@ song = {
     	}
     	modifier = {
     		factor = 0
-    		NOT = { tag = VNZ }
+    		NOT = { OR = { tag = VNZ tag = CLM tag = ECU tag = GCO } }
     	}
 	}
 }
 song = {
-	name = "gcoflavor.mp3"
-	chance = {
-		factor = 1
-		modifier = {
-        	factor = 100
-        	tag = CLM
-    	}
-    	modifier = {
-    		factor = 0
-    		NOT = { tag = CLM }
-    	}
-	}
-}
-song = {
-	name = "gcoflavor.mp3"
-	chance = {
-		factor = 1
-		modifier = {
-        	factor = 100
-        	tag = ECU
-    	}
-    	modifier = {
-    		factor = 0
-    		NOT = { tag = ECU }
-    	}
-	}
-}
-song = {
-	name = "gcoflavor.mp3"
-	chance = {
-		factor = 1
-		modifier = {
-        	factor = 100
-        	tag = GCO
-    	}
-    	modifier = {
-    		factor = 0
-    		NOT = { tag = GCO }
-    	}
-	}
-}
-song = {
-	name = "denflavor.mp3"
+	name = "Den Tapre Landsoldat.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -182,7 +140,7 @@ song = {
 	}
 }
 song = {
-	name = "belflavor.mp3"
+	name = "La Brabanconne.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -196,7 +154,7 @@ song = {
 	}
 }
 song = {
-	name = "finflavor.mp3"
+	name = "Vapaussoturin Valloitusslaulu.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -210,7 +168,7 @@ song = {
 	}
 }
 song = {
-	name = "kukflavor.mp3"
+	name = "Radetzky March.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -224,7 +182,7 @@ song = {
 	}
 }
 song = {
-	name = "fraflavor.mp3"
+	name = "La Marseillaise.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -238,7 +196,7 @@ song = {
 	}
 }
 song = {
-	name = "borflavor.mp3"
+	name = "Marche Henri IV.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -252,7 +210,7 @@ song = {
 	}
 }
 song = {
-	name = "romflavor.mp3"
+	name = "Drum Bun.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -308,7 +266,7 @@ song = {
 	}
 }
 song = {
-	name = "sweflavor.mp3"
+	name = "Jamtlandssangen.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -336,7 +294,7 @@ song = {
 	}
 }
 song = {
-	name = "rusflavor.mp3"
+	name = "Farewell of Slavianka.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -392,7 +350,7 @@ song = {
 	}
 }
 song = {
-	name = "engflavor.mp3"
+	name = "Rule Britannia.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -406,7 +364,7 @@ song = {
 	}
 }
 song = {
-	name = "spcflavor.mp3"
+	name = "Marcha de Oriamendi.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -434,7 +392,7 @@ song = {
 	}
 }
 song = {
-	name = "gerflavor.mp3"
+	name = "Die Wacht am Rhein.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -448,7 +406,7 @@ song = {
 	}
 }
 song = {
-	name = "sicflavor.mp3"
+	name = "Canto de Sanfidesti.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -462,7 +420,7 @@ song = {
 	}
 }
 song = {
-	name = "porflavor.mp3"
+	name = "Deus, Patria, Rei.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -476,9 +434,12 @@ song = {
 	}
 }
 song = {
-	name = "8.550129-2.mp3"
+	name = "Einigkeit-und-Recht-und-Freiheit.mp3"
 	chance = {
-		factor = 1 #?
+		modifier = {
+    		factor = 0
+    		NOT = { is_culture_group = germanic }
+    	}
 	}
 }
 song = {
@@ -488,13 +449,13 @@ song = {
 	}
 }
 song = {
-	name = "8.550235-1.mp3"
+	name = "waltz_no3.mp3"
 	chance = {
 		factor = 1
 	}
 }
 song = {
-	name = "8.550235-3.mp3"
+	name = "8.550235-1.mp3"
 	chance = {
 		factor = 1
 	}
@@ -530,7 +491,7 @@ song = {
 	}
 }
 song = {
-	name = "8.550945-3.mp3"
+	name = "dies_irae_requiem.mp3"
 	chance = {
 		factor = 1
 	}
@@ -1251,15 +1212,6 @@ song = {
 	}
 }
 song = {
-	name = "marchingthroughgeorgia.mp3"
-	chance = {
-		modifier = {
-			factor = -1
-			NOT = { OR = { tag = USA tag = CSA } }
-		}
-	}
-}
-song = {
 	name = "jonnycomesmarchinghome.mp3"
 	chance = {
 		modifier = {
@@ -1274,6 +1226,15 @@ song = {
 		modifier = {
 			factor = -1
 			NOT = { OR = { tag = USA tag = CSA } }
+		}
+	}
+}
+song = {
+	name = "union_dixie.mp3"
+	chance = {
+		modifier = {
+			factor = -1
+			NOT = { war_with = CSA tag = USA }
 		}
 	}
 }
