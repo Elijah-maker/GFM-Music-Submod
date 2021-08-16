@@ -469,7 +469,7 @@ song = {
 	}
 }
 song = {
-	name = "8.550370-1.mp3"
+	name = "Trumpet march from Tannhauser.mp3"
 	chance = {
 		factor = 1
 	}
