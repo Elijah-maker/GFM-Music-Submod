@@ -182,6 +182,20 @@ song = {
 	}
 }
 song = {
+	name = "costa_gavras_z.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	primary_culture = greek
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { primary_culture = greek }
+    	}
+	}
+}
+song = {
 	name = "La Marseillaise.mp3"
 	chance = {
 		factor = 1
@@ -1052,14 +1066,6 @@ song = {
 }
 song = {
 	name = "TritschTratschPolka.mp3"
-	chance = {
-		modifier = {
-			factor = 1
-		}
-	}
-}
-song = {
-	name = "RadetzkyMarch.mp3"
 	chance = {
 		modifier = {
 			factor = 1
@@ -2114,7 +2120,7 @@ song = {
 
 }
 
-###Democracy Songs###
+###Democracy Songs copied from HOI4###
 
 song = {
 	name = "Democracy 1.mp3"
@@ -2195,7 +2201,7 @@ song = {
 }
 
 song = {
-	name = "Democracy 4.mp3"
+	name = "Democracy 4 (HOI4 Heavy Water).mp3"
 
 	chance = {
 		modifier = {
@@ -2221,7 +2227,7 @@ song = {
 }
 
 song = {
-	name = "Democracy 5.mp3"
+	name = "Democracy 5 (HOI4 Krakow).mp3"
 
 	chance = {
 		modifier = {
@@ -2247,7 +2253,7 @@ song = {
 }
 
 song = {
-	name = "Democracy 6.mp3"
+	name = "Democracy 6 (HOI4 Morning of D-Day).mp3"
 
 	chance = {
 		modifier = {
