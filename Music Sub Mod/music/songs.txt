@@ -1,4 +1,66 @@
-Crête à Pierrot.mp3
+song = {
+	name = "columbia_of_the_ocean.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = USA
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = USA }
+    	}
+	}
+}
+song = {
+	name = "brazil_republic_anthem.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = BRZ
+			OR = {
+				government = democracy
+				has_country_flag = Government_Democracy
+			}
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = BRZ OR = { government = democracy has_country_flag = Government_Democracy } }
+    	}
+	}
+}
+song = {
+	name = "egyptian_anthem.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = EGY
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = EGY }
+    	}
+	}
+}
+song = {
+	name = "french-accordion.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	OR = {
+				tag = FRA
+				tag = BOR
+			}
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = FRA tag = BOR }
+    	}
+	}
+}
 song = {
 	name = "Crête à Pierrot.mp3"
 	chance = {
@@ -62,10 +124,18 @@ song = {
 		modifier = {
         	factor = 100
         	tag = BRZ
+			OR = {
+				government = absolute_monarchy
+				government = absolute_empire
+				government = semi_constitutional_empire
+				government = prussian_constitutionalism
+				government = constitutional_empire
+				government = hms_government
+			}
     	}
     	modifier = {
     		factor = 0
-    		NOT = { tag = BRZ }
+    		NOT = { tag = BRZ OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire government = prussian_constitutionalism government = constitutional_empire government = hms_government } }
     	}
 	}
 }
@@ -76,10 +146,11 @@ song = {
 		modifier = {
         	factor = 100
         	tag = USA
+			war_with = CSA
     	}
     	modifier = {
     		factor = 0
-    		NOT = { tag = USA }
+    		NOT = { tag = USA war_with = CSA }
     	}
 	}
 }
@@ -915,6 +986,7 @@ song = {
 	chance = {
 		modifier = {
 			factor = 1
+			war = yes
 		}
 	}
 }
@@ -1206,8 +1278,12 @@ song = {
 	name = "ohimagoodolrebel.mp3"
 	chance = {
 		modifier = {
+        	factor = 100
+        	tag = CSA
+    	}
+		modifier = {
 			factor = -1
-			NOT = { OR = { tag = USA tag = CSA } }
+			NOT = { tag = CSA }
 		}
 	}
 }
@@ -1215,8 +1291,21 @@ song = {
 	name = "jonnycomesmarchinghome.mp3"
 	chance = {
 		modifier = {
+        	factor = 100
+        	OR = {
+				AND = {
+					tag = USA
+					war_with = CSA
+				}
+				AND = {
+					tag = CSA
+					war_with = USA
+				}
+			}
+    	}
+		modifier = {
 			factor = -1
-			NOT = { OR = { tag = USA tag = CSA } }
+			NOT = { AND = { war_with = CSA tag = USA } AND = { war_with = USA tag = CSA } }
 		}
 	}
 }
@@ -1224,14 +1313,24 @@ song = {
 	name = "battlehymnoftherepublic.mp3"
 	chance = {
 		modifier = {
+        	factor = 100
+        	tag = USA
+			war_with = CSA
+    	}
+		modifier = {
 			factor = -1
-			NOT = { OR = { tag = USA tag = CSA } }
+			NOT = { war_with = CSA tag = USA }
 		}
 	}
 }
 song = {
 	name = "union_dixie.mp3"
 	chance = {
+		modifier = {
+        	factor = 100
+        	tag = USA
+			war_with = CSA
+    	}
 		modifier = {
 			factor = -1
 			NOT = { war_with = CSA tag = USA }
@@ -2131,7 +2230,9 @@ song = {
 			NOT = {
 				OR = {
 					government = democracy
+					has_country_flag = Government_Democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 			}
 		}
@@ -2157,7 +2258,9 @@ song = {
 			NOT = {
 				OR = {
 					government = democracy
+					has_country_flag = Government_Democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 			}
 		}
@@ -2183,7 +2286,9 @@ song = {
 			NOT = {
 				OR = {
 					government = democracy
+					has_country_flag = Government_Democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 			}
 		}
@@ -2209,7 +2314,9 @@ song = {
 			NOT = {
 				OR = {
 					government = democracy
+					has_country_flag = Government_Democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 			}
 		}
@@ -2235,7 +2342,9 @@ song = {
 			NOT = {
 				OR = {
 					government = democracy
+					has_country_flag = Government_Democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 			}
 		}
@@ -2261,7 +2370,9 @@ song = {
 			NOT = {
 				OR = {
 					government = democracy
+					has_country_flag = Government_Democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 			}
 		}
@@ -2287,7 +2398,9 @@ song = {
 			NOT = {
 				OR = {
 					government = democracy
+					has_country_flag = Government_Democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 			}
 		}
@@ -2313,7 +2426,9 @@ song = {
 			NOT = {
 				OR = {
 					government = democracy
+					has_country_flag = Government_Democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 			}
 		}
@@ -2339,7 +2454,9 @@ song = {
 			NOT = {
 				OR = {
 					government = democracy
+					has_country_flag = Government_Democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 			}
 		}
@@ -2365,7 +2482,9 @@ song = {
 			NOT = {
 				OR = {
 					government = democracy
+					has_country_flag = Government_Democracy
 					government = hms_government
+					government = constitutional_empire
 				}
 			}
 		}
@@ -2573,6 +2692,8 @@ song = {
 					government = fascist_dictatorship
 					government = prussian_constitutionalism
 					government = absolute_monarchy
+					government = semi_constitutional_empire
+					government = absolute_empire
 				}
 			}
 		}
@@ -2602,6 +2723,8 @@ song = {
 					government = fascist_dictatorship
 					government = prussian_constitutionalism
 					government = absolute_monarchy
+					government = semi_constitutional_empire
+					government = absolute_empire
 				}
 			}
 		}
@@ -2631,6 +2754,8 @@ song = {
 					government = fascist_dictatorship
 					government = prussian_constitutionalism
 					government = absolute_monarchy
+					government = semi_constitutional_empire
+					government = absolute_empire
 				}
 			}
 		}
@@ -2660,6 +2785,8 @@ song = {
 					government = fascist_dictatorship
 					government = prussian_constitutionalism
 					government = absolute_monarchy
+					government = semi_constitutional_empire
+					government = absolute_empire
 				}
 			}
 		}
@@ -2689,6 +2816,8 @@ song = {
 					government = fascist_dictatorship
 					government = prussian_constitutionalism
 					government = absolute_monarchy
+					government = semi_constitutional_empire
+					government = absolute_empire
 				}
 			}
 		}
