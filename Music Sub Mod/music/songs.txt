@@ -2729,8 +2729,7 @@ song = {
 		modifier = {
 			factor = -1
 			NOT = {
-					government = proletarian_dictatorship
-				}
+				government = proletarian_dictatorship
 			}
 		}
 		modifier = {
@@ -2751,7 +2750,6 @@ song = {
 			factor = -1
 			NOT = {
 					government = proletarian_dictatorship
-				}
 			}
 		}
 		modifier = {
@@ -2770,7 +2768,6 @@ song = {
 			factor = -1
 			NOT = {
 					government = proletarian_dictatorship
-				}
 			}
 		}
 		modifier = {
@@ -2789,7 +2786,6 @@ song = {
 			factor = -1
 			NOT = {
 					government = proletarian_dictatorship
-				}
 			}
 		}
 		modifier = {
@@ -2808,7 +2804,6 @@ song = {
 			factor = -1
 			NOT = {
 					government = proletarian_dictatorship
-				}
 			}
 		}
 		modifier = {
@@ -2827,7 +2822,6 @@ song = {
 			factor = -1
 			NOT = {
 					government = proletarian_dictatorship
-				}
 			}
 		}
 		modifier = {
@@ -2846,7 +2840,6 @@ song = {
 			factor = -1
 			NOT = {
 					government = proletarian_dictatorship
-				}
 			}
 		}
 		modifier = {
@@ -2865,7 +2858,6 @@ song = {
 			factor = -1
 			NOT = {
 					government = proletarian_dictatorship
-				}
 			}
 		}
 		modifier = {
@@ -2884,7 +2876,6 @@ song = {
 			factor = -1
 			NOT = {
 					government = proletarian_dictatorship
-				}
 			}
 		}
 		modifier = {
