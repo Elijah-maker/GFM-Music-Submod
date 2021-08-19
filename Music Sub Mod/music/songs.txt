@@ -1,4 +1,52 @@
 song = {
+	name = "onion-chanson.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	OR = {
+				tag = FRA
+				tag = BOR
+			}
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { OR = { tag = FRA tag = BOR } }
+    	}
+	}
+}
+song = {
+	name = "marche-de-la-garde.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	OR = {
+				tag = FRA
+				tag = BOR
+			}
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { OR = { tag = FRA tag = BOR } }
+    	}
+	}
+}
+song = {
+	name = "marcha-zacatecas.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = MEX
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = MEX }
+    	}
+	}
+}
+song = {
 	name = "preussens-gloria.mp3"
 	chance = {
 		factor = 1
@@ -12,7 +60,7 @@ song = {
     	}
     	modifier = {
     		factor = 0
-    		NOT = { tag = PRU tag = NGF tag = GER }
+    		NOT = { OR = { tag = PRU tag = NGF tag = GER } }
     	}
 	}
 }
@@ -105,6 +153,28 @@ song = {
 	}
 }
 song = {
+	name = "ussr_anthem.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	OR = { 
+				tag = RUS
+				tag = SOV
+				tag = RSF
+			}
+			OR = {
+				government = proletarian_dictatorship
+				ruling_party_ideology = communist
+			}
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { OR = { tag = RUS tag = SOV tag = RSF } OR = { government = proletarian_dictatorship ruling_party_ideology = communist } }
+    	}
+	}
+}
+song = {
 	name = "egyptian_anthem.mp3"
 	chance = {
 		factor = 1
@@ -131,7 +201,7 @@ song = {
     	}
     	modifier = {
     		factor = 0
-    		NOT = { tag = FRA tag = BOR }
+    		NOT = { OR = { tag = FRA tag = BOR } }
     	}
 	}
 }
@@ -155,11 +225,11 @@ song = {
 		factor = 1
 		modifier = {
         	factor = 100
-        	tag = AUT
+        	tag = AUS
     	}
     	modifier = {
     		factor = 0
-    		NOT = { tag = AUT }
+    		NOT = { tag = AUS }
     	}
 	}
 }
@@ -174,6 +244,48 @@ song = {
     	modifier = {
     		factor = 0
     		NOT = { tag = CAN }
+    	}
+	}
+}
+song = {
+	name = "ceddin-deden.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = TUR
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = TUR }
+    	}
+	}
+}
+song = {
+	name = "izmir-marsi.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = TUR
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = TUR }
+    	}
+	}
+}
+song = {
+	name = "katibim.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = TUR
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = TUR }
     	}
 	}
 }
@@ -295,6 +407,20 @@ song = {
     	modifier = {
     		factor = 0
     		NOT = { tag = BEL }
+    	}
+	}
+}
+song = {
+	name = "sakkijarven-polka.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = FIN
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = FIN }
     	}
 	}
 }
@@ -1057,6 +1183,24 @@ song = {
 }
 song = {
 	name = "russia1917.mp3"
+	chance = {
+		modifier = {
+			factor = 1
+			war = yes
+		}
+	}
+}
+song = {
+	name = "flight_of_the_valkyries.mp3"
+	chance = {
+		modifier = {
+			factor = 1
+			war = yes
+		}
+	}
+}
+song = {
+	name = "mars-war-bringer.mp3"
 	chance = {
 		modifier = {
 			factor = 1
