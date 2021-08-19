@@ -2496,7 +2496,7 @@ song = {
 }
 
 song = {
-	name = "Democracy 3.mp3"
+	name = "Democracy 3 (HOI4 Bring Forth the Tanks).mp3"
 
 	chance = {
 		modifier = {
@@ -2608,7 +2608,7 @@ song = {
 }
 
 song = {
-	name = "Democracy 7.mp3"
+	name = "Democracy 7 (HOI4 The Attack).mp3"
 
 	chance = {
 		modifier = {
@@ -2636,7 +2636,7 @@ song = {
 }
 
 song = {
-	name = "Democracy 8.mp3"
+	name = "Democracy 8 (HOI4 The Royal Airforce).mp3"
 
 	chance = {
 		modifier = {
@@ -2664,7 +2664,7 @@ song = {
 }
 
 song = {
-	name = "Democracy 9.mp3"
+	name = "Democracy 9 (HOI4 We Are Soldiers).mp3"
 
 	chance = {
 		modifier = {
