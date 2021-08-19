@@ -1,4 +1,78 @@
 song = {
+	name = "preussens-gloria.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	OR = {
+				tag = PRU
+				tag = NGF
+				tag = GER
+			}
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = PRU tag = NGF tag = GER }
+    	}
+	}
+}
+song = {
+	name = "star-spangled-banner.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = USA
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = USA }
+    	}
+	}
+}
+song = {
+	name = "america-my-country-tis-of-thee.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = USA
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = USA }
+    	}
+	}
+}
+song = {
+	name = "america-the-beautiful.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = USA
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = USA }
+    	}
+	}
+}
+song = {
+	name = "hail-columbia.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = USA
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = USA }
+    	}
+	}
+}
+song = {
 	name = "columbia_of_the_ocean.mp3"
 	chance = {
 		factor = 1
