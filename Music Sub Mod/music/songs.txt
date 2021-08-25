@@ -1,4 +1,18 @@
 song = {
+	name = "badnerlied.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = BAD
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = BAD }
+    	}
+	}
+}
+song = {
 	name = "onion-chanson.mp3"
 	chance = {
 		factor = 1
