@@ -309,7 +309,7 @@ song = {
 		factor = 1
 		modifier = {
         	factor = 100
-        	tag = AGR
+        	tag = ARG
     	}
     	modifier = {
     		factor = 0
@@ -388,7 +388,12 @@ song = {
 		factor = 1
 		modifier = {
         	factor = 100
-        	tag = VNZ
+        	OR = {
+				tag = VNZ
+				tag = CLM
+				tag = ECU
+				tag = GCO
+			}
     	}
     	modifier = {
     		factor = 0
@@ -458,11 +463,16 @@ song = {
 		factor = 1
 		modifier = {
         	factor = 100
-        	tag = KUK
+        	OR = {
+				tag = KUK
+				tag = AUS
+				tag = AUB
+				tag = DNB
+			}
     	}
     	modifier = {
     		factor = 0
-    		NOT = { tag = KUK }
+    		NOT = { OR = { tag = KUK tag = AUS tag = AUB tag = DNB } }
     	}
 	}
 }
