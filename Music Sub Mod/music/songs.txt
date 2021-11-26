@@ -1,4 +1,46 @@
 song = {
+	name = "Salam-e Shah.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = PER
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = PER }
+    	}
+	}
+}
+song = {
+	name = "Salamati-ye_Dowlat-e_Elliye-ye_Iran.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = PER
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = PER }
+    	}
+	}
+}
+song = {
+	name = "Persischer-Marsch op. 289 - Johann Strauss II.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = PER
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = PER }
+    	}
+	}
+}
+song = {
 	name = "badnerlied.mp3"
 	chance = {
 		factor = 1
@@ -594,11 +636,14 @@ song = {
 		factor = 1
 		modifier = {
         	factor = 100
-        	tag = HUN
+        	OR = {
+				tag = HUN
+				tag = HUR
+			}
     	}
     	modifier = {
     		factor = 0
-    		NOT = { tag = HUN }
+    		NOT = { OR = { tag = HUN tag = HUR } }
     	}
 	}
 }
