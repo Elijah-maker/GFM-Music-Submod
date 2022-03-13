@@ -718,6 +718,21 @@ song = {
 	}
 }
 song = {
+	name = "lamentforthequeen_bonustrack.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = ENG
+			has_global_flag = death_of_victoria
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = ENG }
+    	}
+	}
+}
+song = {
 	name = "Marcha de Oriamendi.mp3"
 	chance = {
 		factor = 1
