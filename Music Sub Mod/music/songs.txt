@@ -162,20 +162,20 @@ song = {
     	}
 	}
 }
-song = {
-	name = "hail-columbia.mp3"
-	chance = {
-		factor = 1
-		modifier = {
-        	factor = 100
-        	tag = USA
-    	}
-    	modifier = {
-    		factor = 0
-    		NOT = { tag = USA }
-    	}
-	}
-}
+#song = {
+#	name = "hail-columbia.mp3"
+#	chance = {
+#		factor = 1
+#		modifier = {
+#        	factor = 100
+#        	tag = USA
+#    	}
+#    	modifier = {
+#    		factor = 0
+#    		NOT = { tag = USA }
+#    	}
+#	}
+#}
 song = {
 	name = "columbia_of_the_ocean.mp3"
 	chance = {
