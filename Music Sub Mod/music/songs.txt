@@ -829,24 +829,6 @@ song = {
 	}
 }
 song = {
-	name = "8.550370-4.mp3"
-	chance = {
-		factor = 1
-	}
-}
-song = {
-	name = "8.550370-9.mp3"
-	chance = {
-		factor = 1 #?
-	}
-}
-song = {
-	name = "8.550727-1.mp3"
-	chance = {
-		factor = 1
-	}
-}
-song = {
 	name = "8.550944-14.mp3"
 	chance = {
 		factor = 1
@@ -854,12 +836,6 @@ song = {
 }
 song = {
 	name = "dies_irae_requiem.mp3"
-	chance = {
-		factor = 1
-	}
-}
-song = {
-	name = "8.550999-7.mp3"
 	chance = {
 		factor = 1
 	}
@@ -910,12 +886,6 @@ song = {
 	name = "8.554267-12.mp3"
 	chance = {
 		factor = 1 #?
-	}
-}
-song = {
-	name = "8.554267-19.mp3"
-	chance = {
-		factor = 1
 	}
 }
 song = {
