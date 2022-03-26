@@ -823,12 +823,6 @@ song = {
 	}
 }
 song = {
-	name = "8.550235-1.mp3"
-	chance = {
-		factor = 1
-	}
-}
-song = {
 	name = "Trumpet march from Tannhauser.mp3"
 	chance = {
 		factor = 1
@@ -1021,12 +1015,6 @@ song = {
 	}
 }
 song = {
-	name = "8.559059-12.mp3"
-	chance = {
-		factor = 1
-	}
-}
-song = {
 	name = "8.559200-9.mp3"
 	chance = {
 		factor = 1
@@ -1050,12 +1038,6 @@ song = {
 		factor = 1
 	}
 }
-song = {
-	name = "8.559059-12.mp3"
-	chance = {
-		factor = 1
-	}
-}
 ###Menu Theme###
 song = {
 	name = "thecoronation_titletheme.mp3"
@@ -1067,7 +1049,7 @@ song = {
 }
 ###Default music###
 song = {
-	name = "adayatthecourt.mp3"
+	name = "kyrie_eleison.mp3"
 	chance = {
 		factor = 1
 		modifier = {
