@@ -841,36 +841,6 @@ song = {
 	}
 }
 song = {
-	name = "8.553596-16.mp3"
-	chance = {
-		factor = 1
-	}
-}
-song = {
-	name = "8.553597-4.mp3"
-	chance = {
-		factor = 1 #?
-	}
-}
-song = {
-	name = "8.554267-12.mp3"
-	chance = {
-		factor = 1 #?
-	}
-}
-song = {
-	name = "8.554267-5.mp3"
-	chance = {
-		factor = 1
-	}
-}
-song = {
-	name = "8.554844-14.mp3"
-	chance = {
-		factor = 1
-	}
-}
-song = {
 	name = "8.557217-15.mp3"
 	chance = {
 		factor = 1
@@ -903,33 +873,6 @@ song = {
 }
 song = {
 	name = "buckinghampalace.mp3"
-	chance = {
-		factor = 1
-		modifier = {
-			factor = 1
-		}
-	}
-}
-song = {
-	name = "deathofprincealbert.mp3"
-	chance = {
-		factor = 1
-		modifier = {
-			factor = 1
-		}
-	}
-}
-song = {
-	name = "europeanno1850.mp3"
-	chance = {
-		factor = 1
-		modifier = {
-			factor = 1
-		}
-	}
-}
-song = {
-	name = "forgodandqueen.mp3"
 	chance = {
 		factor = 1
 		modifier = {
