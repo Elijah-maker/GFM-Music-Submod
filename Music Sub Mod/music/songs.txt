@@ -1085,15 +1085,6 @@ song = {
 	}
 }
 song = {
-	name = "countryside.mp3"
-	chance = {
-		factor = 1
-		modifier = {
-			factor = 1
-		}
-	}
-}
-song = {
 	name = "deathofprincealbert.mp3"
 	chance = {
 		factor = 1
@@ -1262,18 +1253,6 @@ song = {
 }
 song = {
 	name = "Gopak.mp3"
-	chance = {
-		factor = 1
-	}
-}
-song = {
-	name = "SQno62.mp3"
-	chance = {
-		factor = 1
-	}
-}
-song = {
-	name = "Tannhauser.mp3"
 	chance = {
 		factor = 1
 	}
