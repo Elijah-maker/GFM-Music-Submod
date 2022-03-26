@@ -967,31 +967,7 @@ song = {
 	}
 }
 song = {
-	name = "8.555386-3.mp3"
-	chance = {
-		factor = 1
-	}
-}
-song = {
-	name = "8.555386-4.mp3"
-	chance = {
-		factor = 1
-	}
-}
-song = {
-	name = "8.557217-1.mp3"
-	chance = {
-		factor = 1
-	}
-}
-song = {
 	name = "8.557217-15.mp3"
-	chance = {
-		factor = 1
-	}
-}
-song = {
-	name = "8.557217-8.mp3"
 	chance = {
 		factor = 1
 	}
