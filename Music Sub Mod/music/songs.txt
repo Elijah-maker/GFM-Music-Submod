@@ -67,7 +67,10 @@ song = {
     	}
     	modifier = {
     		factor = 0
-    		NOT = { OR = { tag = FRA tag = BOR } }
+			AND = {
+				NOT = { tag = FRA }
+				NOT = { tag = BOR }
+			}
     	}
 	}
 }
@@ -84,7 +87,10 @@ song = {
     	}
     	modifier = {
     		factor = 0
-    		NOT = { OR = { tag = FRA tag = BOR } }
+			AND = {
+				NOT = { tag = FRA }
+				NOT = { tag = BOR }
+			}
     	}
 	}
 }
@@ -101,7 +107,10 @@ song = {
     	}
     	modifier = {
     		factor = 0
-    		NOT = { OR = { tag = FRA tag = BOR } }
+			AND = {
+				NOT = { tag = FRA }
+				NOT = { tag = BOR }
+			}
     	}
 	}
 }
@@ -133,7 +142,11 @@ song = {
     	}
     	modifier = {
     		factor = 0
-    		NOT = { OR = { tag = PRU tag = NGF tag = GER } }
+			AND = {
+				NOT = { tag = PRU }
+				NOT = { tag = NGF }
+				NOT = { tag = GER }
+			}
     	}
 	}
 }
@@ -221,7 +234,13 @@ song = {
     	}
     	modifier = {
     		factor = 0
-    		NOT = { tag = BRZ OR = { government = democracy has_country_flag = Government_Democracy } }
+			OR = {
+				NOT = { tag = BRZ }
+				AND = {
+					NOT = { government = democracy }
+					NOT = { has_country_flag = Government_Democracy }
+				}
+			}
     	}
 	}
 }
@@ -308,7 +327,10 @@ song = {
     	}
     	modifier = {
     		factor = 0
-    		NOT = { OR = { tag = FRA tag = BOR } }
+			AND = {
+				NOT = { tag = FRA }
+				NOT = { tag = BOR }
+			}
     	}
 	}
 }
@@ -428,7 +450,17 @@ song = {
     	}
     	modifier = {
     		factor = 0
-    		NOT = { tag = BRZ OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire government = prussian_constitutionalism government = constitutional_empire government = hms_government } }
+			OR = {
+				NOT = { tag = BRZ }
+				AND = {
+					NOT = { government = absolute_monarchy }
+					NOT = { government = absolute_empire }
+					NOT = { government = semi_constitutional_empire }
+					NOT = { government = prussian_constitutionalism }
+					NOT = { government = constitutional_empire }
+					NOT = { government = hms_government }
+				}
+			}
     	}
 	}
 }
@@ -490,7 +522,12 @@ song = {
     	}
     	modifier = {
     		factor = 0
-    		NOT = { OR = { tag = VNZ tag = CLM tag = ECU tag = GCO } }
+			AND = {
+				NOT = { tag = VNZ }
+				NOT = { tag = CLM }
+				NOT = { tag = ECU }
+				NOT = { tag = GCO }
+			}
     	}
 	}
 }
@@ -565,7 +602,12 @@ song = {
     	}
     	modifier = {
     		factor = 0
-    		NOT = { OR = { tag = KUK tag = AUS tag = AUB tag = DNB } }
+			AND = {
+				NOT = { tag = AUB }
+				NOT = { tag = KUK }
+				NOT = { tag = AUS }
+				NOT = { tag = DNB }
+			}
     	}
 	}
 }
@@ -694,7 +736,10 @@ song = {
     	}
     	modifier = {
     		factor = 0
-    		NOT = { OR = { tag = HUN tag = HUR } }
+			AND = {
+				NOT = { tag = HUN }
+				NOT = { tag = HUR }
+			}
     	}
 	}
 }
@@ -774,11 +819,11 @@ song = {
 		factor = 1
 		modifier = {
         	factor = 100
-        	tag = GRE
+        	primary_culture = greek
     	}
     	modifier = {
     		factor = 0
-    		NOT = { tag = GRE }
+    		NOT = { primary_culture = greek }
     	}
 	}
 }
@@ -788,11 +833,11 @@ song = {
 		factor = 1
 		modifier = {
         	factor = 100
-        	tag = GRE
+        	primary_culture = greek
     	}
     	modifier = {
     		factor = 0
-    		NOT = { tag = GRE }
+    		NOT = { primary_culture = greek }
     	}
 	}
 }
@@ -1361,7 +1406,16 @@ song = {
     	}
 		modifier = {
 			factor = 0
-			NOT = { AND = { war_with = CSA tag = USA } AND = { war_with = USA tag = CSA } }
+			OR = {
+				AND = {
+					NOT = { tag = USA }
+					NOT = { tag = CSA }
+				}
+				AND = { 
+					NOT = { war_with = USA }
+					NOT = { war_with = CSA } 
+				}			
+			}
 		}
 	}
 }
