@@ -55,6 +55,23 @@ song = {
 	}
 }
 song = {
+	name = "le_reve_passe.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	OR = {
+				tag = FRA
+				tag = BOR
+			}
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { OR = { tag = FRA tag = BOR } }
+    	}
+	}
+}
+song = {
 	name = "onion-chanson.mp3"
 	chance = {
 		factor = 1
@@ -214,19 +231,53 @@ song = {
 		factor = 1
 		modifier = {
         	factor = 100
-        	OR = { 
-				tag = RUS
-				tag = SOV
-				tag = RSF
-			}
-			OR = {
-				government = proletarian_dictatorship
-				ruling_party_ideology = communist
-			}
+			tag = SOV
     	}
     	modifier = {
     		factor = 0
-    		NOT = { OR = { tag = RUS tag = SOV tag = RSF } OR = { government = proletarian_dictatorship ruling_party_ideology = communist } }
+    		NOT = { tag = SOV }
+    	}
+	}
+}
+song = {
+	name = "lets_hit_the_road.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+			tag = SOV
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = SOV }
+    	}
+	}
+}
+song = {
+	name = "banners_of_russia.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+			tag = SOV
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = SOV }
+    	}
+	}
+}
+song = {
+	name = "soldiers_brave_guys.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+			tag = RUS
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = RUS }
     	}
 	}
 }
@@ -662,6 +713,34 @@ song = {
 	}
 }
 song = {
+	name = "marche_slave.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = RUS
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = RUS }
+    	}
+	}
+}
+song = {
+	name = "la_salaverrina.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = PEU
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = PEU }
+    	}
+	}
+}
+song = {
 	name = "pruflavor.mp3"
 	chance = {
 		factor = 1
@@ -691,6 +770,20 @@ song = {
 }
 song = {
 	name = "greflavor.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = GRE
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = GRE }
+    	}
+	}
+}
+song = {
+	name = "the_duce_puts_on_his_uniform.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -863,6 +956,15 @@ song = {
 }
 ###Default music###
 song = {
+	name = "unknown.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+		}
+	}
+}
+song = {
 	name = "kyrie_eleison.mp3"
 	chance = {
 		factor = 1
@@ -944,6 +1046,48 @@ song = {
 		}
 		modifier = {
 			factor = 0
+			war = no
+		}
+	}
+}
+song = {
+	name = "chopin_etude_op10_no12.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1
+			war = yes
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}
+}
+song = {
+	name = "minuetto.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			war = yes
+		}
+		modifier = {
+			factor = 1
+			war = no
+		}
+	}
+}
+song = {
+	name = "clair_de_lune.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			war = yes
+		}
+		modifier = {
+			factor = 1
 			war = no
 		}
 	}
