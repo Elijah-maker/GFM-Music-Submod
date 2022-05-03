@@ -335,7 +335,7 @@ song = {
 	}
 }
 song = {
-	name = "Crête à Pierrot.mp3"
+	name = "Crete a�Pierrot.mp3"
 	chance = {
 		factor = 1
 		modifier = {
