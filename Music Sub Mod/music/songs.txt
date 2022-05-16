@@ -67,10 +67,8 @@ song = {
     	}
     	modifier = {
     		factor = 0
-			AND = {
-				NOT = { tag = FRA }
-				NOT = { tag = BOR }
-			}
+			NOT = { tag = FRA }
+			NOT = { tag = BOR }
     	}
 	}
 }
@@ -87,10 +85,8 @@ song = {
     	}
     	modifier = {
     		factor = 0
-			AND = {
-				NOT = { tag = FRA }
-				NOT = { tag = BOR }
-			}
+			NOT = { tag = FRA }
+			NOT = { tag = BOR }
     	}
 	}
 }
@@ -107,10 +103,8 @@ song = {
     	}
     	modifier = {
     		factor = 0
-			AND = {
-				NOT = { tag = FRA }
-				NOT = { tag = BOR }
-			}
+			NOT = { tag = FRA }
+			NOT = { tag = BOR }
     	}
 	}
 }
@@ -142,11 +136,9 @@ song = {
     	}
     	modifier = {
     		factor = 0
-			AND = {
-				NOT = { tag = PRU }
-				NOT = { tag = NGF }
-				NOT = { tag = GER }
-			}
+			NOT = { tag = PRU }
+			NOT = { tag = NGF }
+			NOT = { tag = GER }
     	}
 	}
 }
@@ -245,7 +237,7 @@ song = {
 	}
 }
 song = {
-	name = "ussr_anthem.mp3"
+	name = "ussr-anthem.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -327,15 +319,13 @@ song = {
     	}
     	modifier = {
     		factor = 0
-			AND = {
-				NOT = { tag = FRA }
-				NOT = { tag = BOR }
-			}
+			NOT = { tag = FRA }
+			NOT = { tag = BOR }
     	}
 	}
 }
 song = {
-	name = "Crete a Pierrot.mp3"
+	name = "Crete a Pierrot.mp3"
 	chance = {
 		factor = 1
 		modifier = {
@@ -522,12 +512,10 @@ song = {
     	}
     	modifier = {
     		factor = 0
-			AND = {
-				NOT = { tag = VNZ }
-				NOT = { tag = CLM }
-				NOT = { tag = ECU }
-				NOT = { tag = GCO }
-			}
+			NOT = { tag = VNZ }
+			NOT = { tag = CLM }
+			NOT = { tag = ECU }
+			NOT = { tag = GCO }
     	}
 	}
 }
@@ -602,12 +590,10 @@ song = {
     	}
     	modifier = {
     		factor = 0
-			AND = {
-				NOT = { tag = AUB }
-				NOT = { tag = KUK }
-				NOT = { tag = AUS }
-				NOT = { tag = DNB }
-			}
+			NOT = { tag = AUB }
+			NOT = { tag = KUK }
+			NOT = { tag = AUS }
+			NOT = { tag = DNB }
     	}
 	}
 }
@@ -736,10 +722,8 @@ song = {
     	}
     	modifier = {
     		factor = 0
-			AND = {
-				NOT = { tag = HUN }
-				NOT = { tag = HUR }
-			}
+			NOT = { tag = HUN }
+			NOT = { tag = HUR }
     	}
 	}
 }
@@ -1085,10 +1069,6 @@ song = {
 	name = "russia1917.mp3"
 	chance = {
 		factor = 1
-		modifier = {
-			factor = 1
-			war = yes
-		}
 		modifier = {
 			factor = 0
 			war = no
