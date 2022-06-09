@@ -715,15 +715,11 @@ song = {
 		factor = 1
 		modifier = {
         	factor = 100
-        	OR = {
-				tag = HUN
-				tag = HUR
-			}
+        	primary_culture = hungarian
     	}
     	modifier = {
     		factor = 0
-			NOT = { tag = HUN }
-			NOT = { tag = HUR }
+			NOT = { primary_culture = hungarian }
     	}
 	}
 }
@@ -850,7 +846,10 @@ song = {
     	}
     	modifier = {
     		factor = 0
-    		NOT = { tag = ENG }
+			OR = {
+				NOT = { tag = ENG }
+				NOT = { has_global_flag = death_of_victoria }
+			}
     	}
 	}
 }
@@ -960,6 +959,10 @@ song = {
 	name = "dies_irae_requiem.mp3"
 	chance = {
 		factor = 1
+		modifier = {
+			factor = 0
+			war = no
+		}
 	}
 }
 song = {
@@ -974,23 +977,11 @@ song = {
 		factor = 1
 	}
 }
-###Menu Theme###
-song = {
-	name = "thecoronation_titletheme.mp3"
-	chance = {
-		modifier = {
-			factor = -1
-		}
-	}
-}
 ###Default music###
 song = {
 	name = "unknown.mp3"
 	chance = {
 		factor = 1
-		modifier = {
-			factor = 1
-		}
 	}
 }
 song = {
@@ -998,16 +989,18 @@ song = {
 	chance = {
 		factor = 1
 		modifier = {
-			factor = 1
+			factor = 0
+			war = no
 		}
 	}
 }
 song = {
-	name = "buckinghampalace.mp3"
+	name = "dies_irae.mp3"
 	chance = {
 		factor = 1
 		modifier = {
-			factor = 1
+			factor = 0
+			war = no
 		}
 	}
 }
@@ -1015,9 +1008,6 @@ song = {
 	name = "handelthis.mp3"
 	chance = {
 		factor = 1
-		modifier = {
-			factor = 1
-		}
 	}
 }
 song = {
@@ -1025,26 +1015,21 @@ song = {
 	chance = {
 		factor = 1
 		modifier = {
-			factor = 1
+			factor = 0
+			war = no
 		}
 	}
 }
 song = {
-	name = "johanswaltz.mp3"
+	name = "hoi2_overture.mp3"
 	chance = {
 		factor = 1
-		modifier = {
-			factor = 1
-		}
 	}
 }
 song = {
 	name = "newworldanthem.mp3"
 	chance = {
 		factor = 1
-		modifier = {
-			factor = 1
-		}
 	}
 }
 song = {
@@ -1052,7 +1037,8 @@ song = {
 	chance = {
 		factor = 1
 		modifier = {
-			factor = 1
+			factor = 0
+			war = yes
 		}
 	}
 }
@@ -1060,9 +1046,6 @@ song = {
 	name = "queensscherzo.mp3"
 	chance = {
 		factor = 1
-		modifier = {
-			factor = 1
-		}
 	}
 }
 song = {
@@ -1080,10 +1063,6 @@ song = {
 	chance = {
 		factor = 1
 		modifier = {
-			factor = 1
-			war = yes
-		}
-		modifier = {
 			factor = 0
 			war = no
 		}
@@ -1097,10 +1076,6 @@ song = {
 			factor = 0
 			war = yes
 		}
-		modifier = {
-			factor = 1
-			war = no
-		}
 	}
 }
 song = {
@@ -1111,20 +1086,12 @@ song = {
 			factor = 0
 			war = yes
 		}
-		modifier = {
-			factor = 1
-			war = no
-		}
 	}
 }
 song = {
 	name = "flight_of_the_valkyries.mp3"
 	chance = {
 		factor = 1
-		modifier = {
-			factor = 1
-			war = yes
-		}
 		modifier = {
 			factor = 0
 			war = no
@@ -1135,10 +1102,6 @@ song = {
 	name = "mars-war-bringer.mp3"
 	chance = {
 		factor = 1
-		modifier = {
-			factor = 1
-			war = yes
-		}
 		modifier = {
 			factor = 0
 			war = no
@@ -1321,6 +1284,18 @@ song = {
 	name = "VienneseMusicalClock.mp3"
 	chance = {
 		factor = 1
+		modifier = {
+			factor = 100
+			OR = {
+				tag = AUS
+				tag = KUK
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { tag = AUS }
+			NOT = { tag = KUK }
+		}
 	}
 }
 song = {
@@ -1358,6 +1333,7 @@ song = {
 song = {
 	name = "ohimagoodolrebel.mp3"
 	chance = {
+		factor = 1
 		modifier = {
         	factor = 100
         	tag = CSA
@@ -1371,6 +1347,7 @@ song = {
 song = {
 	name = "jonnycomesmarchinghome.mp3"
 	chance = {
+		factor = 1
 		modifier = {
         	factor = 100
         	OR = {
@@ -1402,6 +1379,7 @@ song = {
 song = {
 	name = "battlehymnoftherepublic.mp3"
 	chance = {
+		factor = 1
 		modifier = {
         	factor = 100
         	tag = USA
@@ -1416,6 +1394,7 @@ song = {
 song = {
 	name = "union_dixie.mp3"
 	chance = {
+		factor = 1
 		modifier = {
         	factor = 100
         	tag = USA
@@ -1435,13 +1414,14 @@ song = {
 	name = "General 1.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1452,13 +1432,14 @@ song = {
 	name = "General 2.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1469,13 +1450,14 @@ song = {
 	name = "General 3.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1486,13 +1468,14 @@ song = {
 	name = "General 4.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1503,13 +1486,14 @@ song = {
 	name = "General 5.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1520,13 +1504,14 @@ song = {
 	name = "General 6.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1537,13 +1522,14 @@ song = {
 	name = "General 7.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1554,13 +1540,14 @@ song = {
 	name = "General 8.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1571,13 +1558,14 @@ song = {
 	name = "General 9.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1588,13 +1576,14 @@ song = {
 	name = "General 10.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1605,13 +1594,14 @@ song = {
 	name = "General 11.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1622,13 +1612,14 @@ song = {
 	name = "General 12.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1639,13 +1630,14 @@ song = {
 	name = "General 13.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1656,13 +1648,14 @@ song = {
 	name = "General 14.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1673,13 +1666,14 @@ song = {
 	name = "General 15.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1690,13 +1684,14 @@ song = {
 	name = "General 16.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1707,13 +1702,14 @@ song = {
 	name = "General 17.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1724,13 +1720,14 @@ song = {
 	name = "General 18.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1741,13 +1738,14 @@ song = {
 	name = "General 19.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1758,13 +1756,14 @@ song = {
 	name = "General 20.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1775,13 +1774,14 @@ song = {
 	name = "General 21.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1792,13 +1792,14 @@ song = {
 	name = "General 22.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1811,13 +1812,14 @@ song = {
 	name = "Calm 1.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1828,13 +1830,14 @@ song = {
 	name = "Calm 2.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1845,13 +1848,14 @@ song = {
 	name = "Calm 3.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 
@@ -1863,13 +1867,14 @@ song = {
 	name = "Calm 4.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1880,13 +1885,14 @@ song = {
 	name = "Calm 5.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1897,13 +1903,14 @@ song = {
 	name = "Calm 6.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1914,13 +1921,14 @@ song = {
 	name = "Calm 7.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1931,13 +1939,14 @@ song = {
 	name = "Calm 8.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-				factor = -1
+				factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1948,13 +1957,14 @@ song = {
 	name = "Calm 9.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -1965,13 +1975,14 @@ song = {
 	name = "Calm 10.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -1983,13 +1994,14 @@ song = {
 	name = "Calm 11.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -2001,13 +2013,14 @@ song = {
 	name = "Calm 12.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -2019,13 +2032,14 @@ song = {
 	name = "Calm 13.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -2037,13 +2051,14 @@ song = {
 	name = "Calm 14.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -2055,13 +2070,14 @@ song = {
 	name = "Calm 15.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -2075,13 +2091,14 @@ song = {
 	name = "Battle 1.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = no
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -2092,13 +2109,14 @@ song = {
 	name = "Battle 2.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = no
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -2109,13 +2127,14 @@ song = {
 	name = "Battle 3.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = no
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -2126,13 +2145,14 @@ song = {
 	name = "Battle 4.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = no
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -2143,13 +2163,14 @@ song = {
 	name = "Battle 5.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = no
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -2160,13 +2181,14 @@ song = {
 	name = "Battle 6.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = no
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -2177,13 +2199,14 @@ song = {
 	name = "Battle 7.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = no
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -2194,13 +2217,14 @@ song = {
 	name = "Battle 8.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = no
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -2211,13 +2235,14 @@ song = {
 	name = "Battle 9.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = no
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -2228,13 +2253,14 @@ song = {
 	name = "Battle 10.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = no
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -2245,13 +2271,14 @@ song = {
 	name = "Battle 11.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = no
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -2262,13 +2289,14 @@ song = {
 	name = "Battle 12.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = no
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -2279,13 +2307,14 @@ song = {
 	name = "Battle 13.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = no
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -2296,13 +2325,14 @@ song = {
 	name = "Battle 14.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			war = no
 		}
 
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 	}
@@ -2315,23 +2345,20 @@ song = {
 	name = "Democracy 1.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
-			NOT = {
-				OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-					government = hms_government
-					government = constitutional_empire
-				}
-			}
+			factor = 0
+			NOT = { government = democracy }
+			NOT = { has_country_flag = Government_Democracy }
+			NOT = { government = hms_government }
+			NOT = { government = constitutional_empire }
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -2343,23 +2370,20 @@ song = {
 	name = "Democracy 2.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
-			NOT = {
-				OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-					government = hms_government
-					government = constitutional_empire
-				}
-			}
+			factor = 0
+			NOT = { government = democracy }
+			NOT = { has_country_flag = Government_Democracy }
+			NOT = { government = hms_government }
+			NOT = { government = constitutional_empire }
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -2371,23 +2395,20 @@ song = {
 	name = "Democracy 3 (HOI4 Bring Forth the Tanks).mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
-			NOT = {
-				OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-					government = hms_government
-					government = constitutional_empire
-				}
-			}
+			factor = 0
+			NOT = { government = democracy }
+			NOT = { has_country_flag = Government_Democracy }
+			NOT = { government = hms_government }
+			NOT = { government = constitutional_empire }
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -2399,23 +2420,20 @@ song = {
 	name = "Democracy 4 (HOI4 Heavy Water).mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
-			NOT = {
-				OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-					government = hms_government
-					government = constitutional_empire
-				}
-			}
+			factor = 0
+			NOT = { government = democracy }
+			NOT = { has_country_flag = Government_Democracy }
+			NOT = { government = hms_government }
+			NOT = { government = constitutional_empire }
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -2427,23 +2445,20 @@ song = {
 	name = "Democracy 5 (HOI4 Krakow).mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
-			NOT = {
-				OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-					government = hms_government
-					government = constitutional_empire
-				}
-			}
+			factor = 0
+			NOT = { government = democracy }
+			NOT = { has_country_flag = Government_Democracy }
+			NOT = { government = hms_government }
+			NOT = { government = constitutional_empire }
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -2455,23 +2470,20 @@ song = {
 	name = "Democracy 6 (HOI4 Morning of D-Day).mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
-			NOT = {
-				OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-					government = hms_government
-					government = constitutional_empire
-				}
-			}
+			factor = 0
+			NOT = { government = democracy }
+			NOT = { has_country_flag = Government_Democracy }
+			NOT = { government = hms_government }
+			NOT = { government = constitutional_empire }
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -2483,23 +2495,20 @@ song = {
 	name = "Democracy 7 (HOI4 The Attack).mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
-			NOT = {
-				OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-					government = hms_government
-					government = constitutional_empire
-				}
-			}
+			factor = 0
+			NOT = { government = democracy }
+			NOT = { has_country_flag = Government_Democracy }
+			NOT = { government = hms_government }
+			NOT = { government = constitutional_empire }
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -2511,23 +2520,20 @@ song = {
 	name = "Democracy 8 (HOI4 The Royal Airforce).mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
-			NOT = {
-				OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-					government = hms_government
-					government = constitutional_empire
-				}
-			}
+			factor = 0
+			NOT = { government = democracy }
+			NOT = { has_country_flag = Government_Democracy }
+			NOT = { government = hms_government }
+			NOT = { government = constitutional_empire }
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -2539,23 +2545,20 @@ song = {
 	name = "Democracy 9 (HOI4 We Are Soldiers).mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
-			NOT = {
-				OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-					government = hms_government
-					government = constitutional_empire
-				}
-			}
+			factor = 0
+			NOT = { government = democracy }
+			NOT = { has_country_flag = Government_Democracy }
+			NOT = { government = hms_government }
+			NOT = { government = constitutional_empire }
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -2567,23 +2570,20 @@ song = {
 	name = "Democracy 10.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
-			NOT = {
-				OR = {
-					government = democracy
-					has_country_flag = Government_Democracy
-					government = hms_government
-					government = constitutional_empire
-				}
-			}
+			factor = 0
+			NOT = { government = democracy }
+			NOT = { has_country_flag = Government_Democracy }
+			NOT = { government = hms_government }
+			NOT = { government = constitutional_empire }
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 		
@@ -2598,14 +2598,15 @@ song = {
 	name = "Communist 1.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = {
 				government = proletarian_dictatorship
 			}
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 	}
@@ -2618,14 +2619,15 @@ song = {
 	name = "Communist 3.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = {
 					government = proletarian_dictatorship
 			}
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 	}
@@ -2636,14 +2638,15 @@ song = {
 	name = "Communist 4.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = {
 					government = proletarian_dictatorship
 			}
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 	}
@@ -2654,14 +2657,15 @@ song = {
 	name = "Communist 5.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = {
 					government = proletarian_dictatorship
 			}
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 	}
@@ -2672,14 +2676,15 @@ song = {
 	name = "Communist 6.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = {
 					government = proletarian_dictatorship
 			}
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 	}
@@ -2690,14 +2695,15 @@ song = {
 	name = "Communist 7.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = {
 					government = proletarian_dictatorship
 			}
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 	}
@@ -2708,14 +2714,15 @@ song = {
 	name = "Communist 8.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = {
 					government = proletarian_dictatorship
 			}
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 	}
@@ -2726,14 +2733,15 @@ song = {
 	name = "Communist 9.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = {
 					government = proletarian_dictatorship
 			}
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 	}
@@ -2744,14 +2752,15 @@ song = {
 	name = "Communist 10.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = {
 					government = proletarian_dictatorship
 			}
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 	}
@@ -2764,8 +2773,9 @@ song = {
 	name = "Dictatorship 1.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = {
 				OR = {
 					government = presidential_dictatorship
@@ -2779,11 +2789,11 @@ song = {
 			}
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 
@@ -2795,8 +2805,9 @@ song = {
 	name = "Dictatorship 2.mp3"
 	
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = {
 				OR = {
 					government = presidential_dictatorship
@@ -2810,11 +2821,11 @@ song = {
 			}
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 
@@ -2826,8 +2837,9 @@ song = {
 	name = "Dictatorship 3.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = {
 				OR = {
 					government = presidential_dictatorship
@@ -2841,11 +2853,11 @@ song = {
 			}
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 
@@ -2857,8 +2869,9 @@ song = {
 	name = "Dictatorship 4.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = {
 				OR = {
 					government = presidential_dictatorship
@@ -2872,11 +2885,11 @@ song = {
 			}
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 
@@ -2888,8 +2901,9 @@ song = {
 	name = "Dictatorship 5.mp3"
 
 	chance = {
+		factor = 1
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = {
 				OR = {
 					government = presidential_dictatorship
@@ -2903,11 +2917,11 @@ song = {
 			}
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			war = yes
 		}
 		modifier = {
-			factor = -1
+			factor = 0
 			NOT = { year = 1900 }
 		}
 
