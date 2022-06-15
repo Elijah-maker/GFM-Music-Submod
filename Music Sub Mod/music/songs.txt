@@ -972,7 +972,7 @@ song = {
 	}
 }
 song = {
-	name = "8.559200-9.mp3"
+	name = "semper fidelis.mp3"
 	chance = {
 		factor = 1
 	}
