@@ -483,20 +483,7 @@ song = {
     	}
 	}
 }
-song = {
-	name = "Himno Nacional Mexicano.mp3"
-	chance = {
-		factor = 1
-		modifier = {
-        	factor = 100
-        	tag = MEX
-    	}
-    	modifier = {
-    		factor = 0
-    		NOT = { tag = MEX }
-    	}
-	}
-}
+
 song = {
 	name = "Marcha Libertadora.mp3"
 	chance = {
@@ -2927,4 +2914,79 @@ song = {
 
 	}
 
+}
+
+song = {
+	name = "Big Iron.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = TEX
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = TEX }
+    	}
+	}
+}
+
+song = {
+	name = "Cielito lindo.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = MEX
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = MEX }
+    	}
+	}
+}
+
+song = {
+	name = "Dios nunca muere.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = MEX
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = MEX }
+    	}
+	}
+}
+
+song = {
+	name = "Marcha a Moran.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = PEU
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = PEU }
+    	}
+	}
+}
+
+song = {
+	name = "Himno Nacional Mexicano.mp3"
+	chance = {
+		factor = 1
+		modifier = {
+        	factor = 100
+        	tag = MEX
+    	}
+    	modifier = {
+    		factor = 0
+    		NOT = { tag = MEX }
+    	}
+	}
 }
